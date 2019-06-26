@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Hi from '@/components/Hi'
 import HiOne from '@/components/HiOne'
 import HiTwo from '@/components/HiTwo'
+import Params from '@/components/Params'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
@@ -16,12 +18,21 @@ export default new Router({
     }, {
       path: '/hi',
       name: 'Hi',
-      component: Hi,
-      children: [
-        {path: '/', component: Hi},
-        {path: 'hiOne', component: HiOne},
-        {path: 'hiTwo', component: HiTwo}
-      ]
+      components: {
+        default: Hi,
+        left: HiOne,
+        right: HiTwo
+      }
+    }, {
+      path: '/params/:newsId/:newsTitle',
+      name:'Params',
+      component: Params
+    }, {
+      path: '/goBack',
+      redirect: '/'
+    }, {
+      path: "*",
+      component: Error
     }
   ]
 })
