@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1>{{msg}}--{{$route.params.userName}}</h1>
-    <router-view/>
+    <h1> {{msg}} </h1>
   </div>
 </template>
 
 <script>
   export default {
-    name: "HiOne", data() {
+    name: "Home",
+    data() {
       return {
-        msg: 'hi page child one'
+        msg: 'home page'
       }
     }
   }
