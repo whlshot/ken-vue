@@ -4,13 +4,13 @@
       <h1>XXX管理系统</h1>
       <el-form ref="form" class="login-form">
         <el-form-item label="用户名">
-          <el-input></el-input>
+          <el-input v-model="userName"></el-input>
         </el-form-item>
         <el-form-item label="密码">
-          <el-input type="password"></el-input>
+          <el-input type="password" v-model="password"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button>登录</el-button>
+          <el-button @click="login">登录</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -18,8 +18,21 @@
 </template>
 
 <script>
+  import {login} from '../../api/requestApi'
+
   export default {
-    name: ""
+    name: "",
+    data() {
+      return {
+        userName: '',
+        password: ''
+      }
+    },
+    methods: {
+      async login() {
+        login(this.userName, this.password)
+      }
+    }
   }
 </script>
 
@@ -44,7 +57,8 @@
     width: 380px;
     height: 360px;
   }
-  .login-form{
+
+  .login-form {
     background-color: white;
     padding: 10px;
     border-radius: 5px;

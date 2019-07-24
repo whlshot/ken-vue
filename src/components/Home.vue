@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1> {{msg}} </h1>
+    <div>
+      <el-button type="primary" plain @click="login">登录</el-button>
+    </div>
   </div>
 </template>
 
@@ -10,6 +13,11 @@
     data() {
       return {
         msg: 'home page'
+      }
+    },
+    methods: {
+      login() {
+        this.$router.push("login")
       }
     }
   }
