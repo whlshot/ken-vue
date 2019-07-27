@@ -31,6 +31,7 @@
     methods: {
       async login() {
         login(this.userName, this.password)
+        this.$router.push("/home")
       }
     }
   }
