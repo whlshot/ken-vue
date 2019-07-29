@@ -1,13 +1,19 @@
 <template>
-    <div>
-      <h1>FirstPage</h1>
-    </div>
+  <div>
+    <headTop></headTop>
+    <h1>FirstPage</h1>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "FirstPage"
+  import headTop from '@/components/HeadTop'
+
+  export default {
+    name: "",
+    components: {
+      headTop
     }
+  }
 </script>
 
 <style scoped>

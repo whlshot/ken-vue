@@ -8,7 +8,6 @@
                  @close="handleClose"
                  background-color="#324057"
                  text-color="#fff"
-                 collapse-transition="true"
                  active-text-color="#ffd04b"
                  theme="dark"
                  router
