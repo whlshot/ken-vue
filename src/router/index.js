@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Error from '@/components/Error'
 import Login from '@/components/login/Login'
-import Demo from '@/components/Demo'
 import UserList from '@/components/UserList'
 import FirstPage from '@/components/FirstPage'
+import HeadTop from '@/components/HeadTop'
 
 Vue.use(Router)
 
@@ -16,8 +16,8 @@ export default new Router({
       redirect: '/login'
     },
     {
-      path: '/demo',
-      component: Demo
+      path: '/headTop',
+      component: HeadTop
     },
     {
       path: '/home',
@@ -26,11 +26,13 @@ export default new Router({
       children: [
         {
           path: '',
-          component: FirstPage
+          component: FirstPage,
+          meta:[]
         },
         {
           path: '/userList',
-          component: UserList
+          component: UserList,
+          meta:['数据管理','用户列表']
         }
       ]
     },

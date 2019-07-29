@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <el-row>
-      <el-col :span="4" style="min-height: 100%; background-color: #324057;">
+  <div class="fill-container">
+    <el-row style="height: 100%">
+      <el-col :span="4" style="height: 100%; min-height: 100%; background-color: #324057;">
         <el-menu default-active="home"
                  class="el-menu-vertical-demo"
                  @open="handleOpen"
@@ -93,4 +93,8 @@
 </script>
 
 <style scoped>
+  .fill-container {
+    height: 100%;
+    width: 100%;
+  }
 </style>
