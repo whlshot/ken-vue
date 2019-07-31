@@ -6,6 +6,7 @@ import Login from '@/components/login/Login'
 import UserList from '@/components/UserList'
 import FirstPage from '@/components/FirstPage'
 import HeadTop from '@/components/HeadTop'
+import Tendency from '@/components/Tendency'
 
 Vue.use(Router)
 
@@ -14,6 +15,10 @@ export default new Router({
     {
       path: '/',
       redirect: '/login'
+    },
+    {
+      path: '/chart',
+      component: Tendency
     },
     {
       path: '/headTop',
@@ -27,12 +32,12 @@ export default new Router({
         {
           path: '',
           component: FirstPage,
-          meta:[]
+          meta: []
         },
         {
           path: '/userList',
           component: UserList,
-          meta:['数据管理','用户列表']
+          meta: ['数据管理', '用户列表']
         }
       ]
     },
